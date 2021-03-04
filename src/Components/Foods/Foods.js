@@ -2,6 +2,7 @@ import React from 'react';
 import FoodCard from '../FoodCard';
 import { useEffect, useState } from 'react';
 import Form from '../Form/Form';
+import FoodCart from '../FoodCart/FoodCart';
 const Foods = () => {
 
         const [search,updateSearch] = useState('');
@@ -29,6 +30,7 @@ const Foods = () => {
     return (
         <div>
              <Form search={search} query={query} cart={cart} foodSearch={foodSearch} updateQuery={updateQuery}></Form>
+             <FoodCart food={cart}></FoodCart>
             <div className="food-card">
     {
       food.map(f=><FoodCard food={f} key={f.idMeal} handleClick = {handleClick}></FoodCard>)

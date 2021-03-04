@@ -12,6 +12,8 @@ import {
 import Contact from './Components/Contact/Contact';
 import Foods from './Components/Foods/Foods';
 import Form from './Components/Form/Form';
+import ProductDetails from './Components/ProductDetails/ProductDetails';
+import Order from './Components/Order/Order';
 
 const App=()=>{
 
@@ -31,8 +33,14 @@ const App=()=>{
         <Route path='/Food'>
         <Foods></Foods>
         </Route>
-        <Route path='/Contacts'>
+        <Route  path='/Contacts'>
         <Contact></Contact>
+        </Route>
+        <Route path='/Order'>
+          <Order></Order>
+        </Route>
+        <Route path='/:foodKey'>
+          <ProductDetails></ProductDetails>
         </Route>
       </Switch>
     </Router>
